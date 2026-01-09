@@ -11,9 +11,10 @@ This repository contains a chatbot application deployed on Kubernetes.
 
 ## Repository Structure
 
-backend/ # REST API + LLM + MongoDB
-frontend/ # Chat UI
-k8s/ # Kubernetes manifests
+-.workflows
+- backend/ # REST API + LLM + MongoDB
+- frontend/ # Chat UI
+- k8s/ # Kubernetes manifests
 
 
 ## API
