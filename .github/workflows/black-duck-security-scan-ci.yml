@@ -35,8 +35,8 @@ jobs:
         env:
           DETECT_PROJECT_NAME: ${{ github.event.repository.name }}
           BRIDGE_NETWORK_SSL_TRUSTALL: 'true'
-          BRIDGE_BLACKDUCKSCA_REPORTS_SARIF_CREATE: "true"
-          BRIDGE_BLACKDUCKSCA_REPORTS_SARIF_FILE_PATH: ".bridge/blackduck_sca_sarif_generator/report.sarif.json"
+          # BRIDGE_BLACKDUCKSCA_REPORTS_SARIF_CREATE: "true"
+          # BRIDGE_BLACKDUCKSCA_REPORTS_SARIF_FILE_PATH: ".bridge/blackduck_sca_sarif_generator/report.sarif.json"
         with:
           ### ---------- BLACKDUCK SCA SCANNING: REQUIRED FIELDS ----------
           blackducksca_url: ${{ vars.BLACKDUCK_URL }}
@@ -53,8 +53,8 @@ jobs:
           blackducksca_prcomment_enabled: 'true'
           
           ### SARIF report generation and upload to GitHub Adavanced Security: Uncomment below to enable
-          blackducksca_reports_sarif_create: 'true' # Create Black Duck SCA SARIF report and upload it as artifact
-          blackducksca_upload_sarif_report: 'true'  # Upload Black Duck SCA SARIF report in GitHub Advanced Security tab
+          # blackducksca_reports_sarif_create: 'true' # Create Black Duck SCA SARIF report and upload it as artifact
+          # blackducksca_upload_sarif_report: 'true'  # Upload Black Duck SCA SARIF report in GitHub Advanced Security tab
 
           ### Mark build status if policy violating issues are found
         # mark_build_status: 'success'
