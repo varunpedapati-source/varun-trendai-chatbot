@@ -32,10 +32,11 @@ jobs:
         uses: actions/checkout@v4
       - name: Black Duck SCA scan
         uses: blackduck-inc/black-duck-security-scan@805cbd09e806b01907bbea0f990723c2bb85abe9
-        ### Configure DETECT environment variables
         env:
           DETECT_PROJECT_NAME: ${{ github.event.repository.name }}
           BRIDGE_NETWORK_SSL_TRUSTALL: 'true'
+          BRIDGE_BLACKDUCKSCA_REPORTS_SARIF_CREATE: "true"
+          BRIDGE_BLACKDUCKSCA_REPORTS_SARIF_FILE_PATH: ".bridge/blackduck_sca_sarif_generator/report.sarif.json"
         with:
           ### ---------- BLACKDUCK SCA SCANNING: REQUIRED FIELDS ----------
           blackducksca_url: ${{ vars.BLACKDUCK_URL }}
